@@ -24,9 +24,13 @@ int servo_extend()
 {
     enable_servos(); // turns on all servos
     set_servo_position(1,1216); // this sets the servo position to 1216 while on servo 1  
+    msleep(500); // sets how long it does 
     set_servo_position(1,649); // this sets the servo position to 649 while on servo 1
+    msleep(500); // sets how long it does
     set_servo_position(1,1216);  
+    msleep(500); // sets how long it does
     set_servo_position(1,649); 
+    msleep(500); // sets how long it does
     ao(); // turns off all servos
 }
 
