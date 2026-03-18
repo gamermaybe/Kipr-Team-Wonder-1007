@@ -1,12 +1,24 @@
 #include <kipr/wombat.h>
 
+int right= 3;
+int left= 0; 
+
 int main() {
-    
+   
 }
 
 int claw_open_and_close() {
     
 }
+
+clear_motor_piosition_counter(right);
+
+while (get_motor_position_counter(right) < 3000)
+{
+  motor(right,100);
+  motor(left,100);
+}
+
 
 int servo_extend()
 {
