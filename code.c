@@ -7,20 +7,7 @@ int main() {
    
 }
 
-int claw_open_and_close() {
-    
-}
-
-clear_motor_piosition_counter(right);
-
-while (get_motor_position_counter(right) < 3000)
-{
-  motor(right,100);
-  motor(left,100);
-}
-
-
-int servo_extend()
+void servo_extend()
 {
     enable_servos(); // turns on all servos
     set_servo_position(1,1216); // this sets the servo position to 1216 while on servo 1  
@@ -32,5 +19,19 @@ int servo_extend()
     set_servo_position(1,649); 
     msleep(500); // sets how long it does
     ao(); // turns off all servos
+}
+
+void claw_open_and_close() {
+    
+}
+
+servo_extend();
+clear_motor_piosition_counter(right);
+
+while (get_motor_position_counter(right) < 3000)
+{
+  motor(right,100);
+  motor(left,100);
+  return 0;
 }
 
