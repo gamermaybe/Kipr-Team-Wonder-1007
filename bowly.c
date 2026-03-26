@@ -6,6 +6,13 @@ int left=3;
 void push_balls(){
     motor(right,100);
     motor(left,100);
+    msleep(4000);
+}
+
+void go_backwards(){
+    (right,-100);
+    (left, -100);
+    msleep(500);
 }
 
 int main(){
