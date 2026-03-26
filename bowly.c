@@ -4,7 +4,7 @@ int right=0;
 int left=3;
 
 void push_balls(){
-    motor(right,100);
+    motor(right,96);
     motor(left,100);
     msleep(4000);
 }
