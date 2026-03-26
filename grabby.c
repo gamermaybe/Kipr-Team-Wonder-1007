@@ -3,20 +3,6 @@
 int right= 3;
 int left= 0; 
 
-int main(){
-  while (get_motor_position_counter(right) < 3000)
-    {
-      motor(right,100);
-      motor(left,100);
-      return 0;
-    }
-    claw_open_and_close();
-    
-}
-  
-
-
-
 // 2047 is the max the claw can close
 // 1320 is the max the claw can open (recommended
  
@@ -29,6 +15,16 @@ void claw_open_and_close() {
 
 }
 
+int main(){
+  while (get_motor_position_counter(right) < 3000)
+    {
+      motor(right,100);
+      motor(left,100);
+      return 0;
+    }
+    claw_open_and_close();
+    
+}
 
 // This was for the mini video (in the google slides
 
